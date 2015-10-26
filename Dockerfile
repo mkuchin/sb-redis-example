@@ -15,7 +15,7 @@ ENV     JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 WORKDIR /usr/local/app
 ADD      gradle ./gradle
 COPY     gradlew build.gradle ./
-RUN     ./gradlew clean
+RUN     ./gradlew jar
 COPY    src ./src
 RUN     ./gradlew installDist
 EXPOSE  8080
