@@ -16,3 +16,8 @@ WORKDIR /usr/local/app
 ADD      gradle ./gradle
 COPY     gradlew build.gradle ./
 RUN     ./gradlew clean
+COPY    src ./src
+RUN     ./gradlew installDist
+EXPOSE  8080
+WORKDIR build/install/boot-example
+CMD ["bin/boot-example"]
