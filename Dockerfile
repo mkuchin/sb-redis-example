@@ -13,6 +13,6 @@ ENV     JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 # Run gradle wrapper to install gradle and project dependencies
 WORKDIR /usr/local/app
-ADD      gradle
+ADD      gradle ./
 COPY     gradlew build.gradle ./
 RUN     ./gradlew clean
