@@ -20,5 +20,5 @@ RUN     ./gradlew compileJava
 COPY    src ./src
 RUN     ./gradlew installDist
 EXPOSE  8080
-WORKDIR build/install/boot-example
+WORKDIR build/install/app
 CMD ["bin/boot-example"]
